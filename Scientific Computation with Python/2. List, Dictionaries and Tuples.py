@@ -86,5 +86,61 @@ print("-----------------------------------\nDictionaries\n----------------------
 #Dictionaries
 """
 Dictionaries is a data type where we store values in a sort of 'key-value- pair -> They're like HashMaps in Java
+    Instead of accesing and modifying values through their index, we do it using their assigned Keys
+    Uses curly brackets, commas and colons.
+    
 """
+
+exampleDict = dict() #Creating an empty dictionary
+exampleDict2 = {
+    1:"Monday",
+    2:"Tuesday",
+    3:"Wednesday",
+    4:"Tursday", #Intentional spelling mistake
+    5:"Friday",
+    6:"Saturday",
+    7:"Sunday"
+}
+print("Printing entire dictionary 1: ", exampleDict)
+print("Printing entire dictionary 2: ", exampleDict2)
+print("\nAccessing values through key:")
+print(exampleDict2[4]) #Should print out 'Tursday'
+exampleDict2[4] = "Thursday" #Fixing spelling mistake
+print(exampleDict2[4])
+
+print("\nAdding new key:value to dictionaries:")
+print(exampleDict)
+exampleDict["Test"] = "Hello world!" #We add the Key "Test" with value "Hello World"
+print(exampleDict)
+
+"""
+Histograms are common uses of dictionaries where we store the labels as keys and how many times they occur in their respective values
+"""
+print("\nUsing dictionaries for counting")
+counts = dict()
+letters = ['a','b','a','d','d']
+for name in letters:
+    counts[name] = counts.get(name, 0) + 1 #get() method takes two parameters and returns the value of corresponding key or it returns the second parameter if it does not exist
+print(counts)
+
+"""
+
+"""
+
+"""
+An error occur if we attempt to access a key that is not in the dictionary (It doesn't exist.).
+    We use the 'in' operator to check if the key is in the dictionary before we use any other codes
+"""
+print("\nAccessing non existent keys")
+try:
+    print(exampleDict2[8])
+except:
+    print("ERROR") #Key 8 doesn't exist!
+
+if 8 in exampleList2: #'in' checks if 8 exists in exampleList2 so we don't necessary need to use a try-except
+    print(exampleDict2[8])
+else:
+     print("KEY DOES NOT EXISTS")
+
+
 
