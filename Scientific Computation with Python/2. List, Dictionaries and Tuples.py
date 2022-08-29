@@ -124,10 +124,6 @@ for name in letters:
 print(counts)
 
 """
-
-"""
-
-"""
 An error occur if we attempt to access a key that is not in the dictionary (It doesn't exist.).
     We use the 'in' operator to check if the key is in the dictionary before we use any other codes
 """
@@ -142,5 +138,29 @@ if 8 in exampleList2: #'in' checks if 8 exists in exampleList2 so we don't neces
 else:
      print("KEY DOES NOT EXISTS")
 
+"""
+Like Lists, we can use Definite Loops with Dictionaries.
+"""
+print("\n\nPrint the dictionary using FOR Loops")
+for day in exampleDict2: #It will only take out the keys
+    print(day, exampleDict2[day])
 
+"""
+You are able to get a list of keys, values or both!
+"""
+print("\n\nPrinting the Keys of a Dictionary as a list")
+print(list(exampleDict2)) #Prints out the keys of a Dictionary
+print(exampleDict2.keys()) #Prints out the keys of a Dictionary
 
+print("\nPrinting values of a Dictionary as a list")
+print(exampleDict2.values()) #Prints out the values of a Dictionary
+
+print("\nPrinting keys and values of a dictionary as a list")
+print(exampleDict2.items()) #Prints out the keys and values of a Dictionary
+
+"""
+Instead of relying on a single variable for a FOR loop, we can use two of them. One for the key and the other for the value using the list generated from item()!
+"""
+print("\n\nPrinting dictionary using item()")
+for number, day in exampleDict2.items():
+    print(number, day)
