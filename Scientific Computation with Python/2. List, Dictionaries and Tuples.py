@@ -164,3 +164,43 @@ Instead of relying on a single variable for a FOR loop, we can use two of them. 
 print("\n\nPrinting dictionary using item()")
 for number, day in exampleDict2.items():
     print(number, day)
+
+print("-----------------------------------\nTuples\n-----------------------------------")
+"""
+Tuples behaves like a limited versions of list (immutable version) where you can use the following methods:
+    - count() - returns the number of occurance of a specific element
+    - index() - returns the position of a specified values
+"""
+
+exampleTuple = (1, 2, 3, 4) #We use normal brackets instead of curly/square ones!
+#exampleTuple[2] = 4 #This returns an error as they are fixed, much like strings
+
+"""
+As you can see, due to Tuples being Immutable, you are unable able to change anything within. The reason behind this:
+    - Simple to use
+    - Efficient for memory usage and performance
+    - Suitable for temporary variables
+"""
+
+"""
+You are able to use tuples on the left side of assignments!
+"""
+print("\nUsing tuples as assignment variables")
+(x,y) = (4, 'fred') #You assign an element in the left tuple to the element of the same index in the other
+print(x) #Prints '4'
+print(y) #Prints 'fred'
+
+
+"""
+Recall that when you use item() with a dictionary, you get a list of tuples of key-value pairs 
+"""
+print("\n\nPrinting dictionary as a Tuple: ", exampleDict2.items())
+
+"""
+Comparison Operators works with tuples. First it compares with the first index of each tuple, if the comparison is true then the overall comparison is true. Otherwise, move to the next index and then output false if no more comparison is made.
+"""
+print("\n\nComparison Operators with Tuples")
+print((0,1,2) < (-1, -2, -3)) #Outputs false as no comparison in each index is not true
+print((0,1,2) < (3, 4, 5)) #Outputs true on the first comparison
+#When we use Strings instead of integers, it compares each letter of the string until it reaches a character that is not equal.
+print(('Jones', 'Sally') < ('Jones', 'Sam')) #Outputs true as the first index are equal so more to the next index where 'sa' matches but 'm' is greater than 'l' considering its position in the alphabet
